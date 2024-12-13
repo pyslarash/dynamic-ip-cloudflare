@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .  # Use the current directory for the build
+      dockerfile: Dockerfile
+    container_name: dns_updater
+    restart: always
+    volumes:
+      - .:/app  # Mount the current directory for live updates (optional)
+    environment:
+      - API_TOKEN=${API_TOKEN}  # Pass API_TOKEN from environment
+    command: ["python", "app.py"]

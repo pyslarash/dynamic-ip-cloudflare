@@ -1,0 +1,9 @@
+# Exclude environment files
+.env
+
+# Exclude virtual environments
+venv/
+__pycache__/
+
+# Exclude specific file
+zones.txt
